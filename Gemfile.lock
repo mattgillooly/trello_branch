@@ -1,0 +1,38 @@
+PATH
+  remote: .
+  specs:
+    trello_branch (0.0.0)
+      configuration
+      git
+      ruby-trello
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (3.2.6)
+      activesupport (= 3.2.6)
+      builder (~> 3.0.0)
+    activesupport (3.2.6)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    addressable (2.2.8)
+    builder (3.0.0)
+    configuration (1.3.1)
+    git (1.2.5)
+    i18n (0.6.0)
+    mime-types (1.19)
+    multi_json (1.3.6)
+    oauth (0.4.6)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    ruby-trello (0.4.2)
+      activemodel
+      addressable (~> 2.2.6)
+      oauth (~> 0.4.5)
+      rest-client (~> 1.6.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  trello_branch!

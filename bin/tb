@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'trello_branch'
+require 'configuration'
+
+Configuration.path = '~'
+config = Configuration.for 'tb'
+
+Trello::Authorization::BasicAuthPolicy.developer_public_key = config.developer_public_key
+Trello::Authorization::BasicAuthPolicy.member_token = config.member_token
+
+module Trello::Authorization
+  remove_const :AuthPolicy
+  AuthPolicy = BasicAuthPolicy
+end
+
+tb = TrelloBranch.new(config.board_id)
+tb.checkout_card(ARGV[0].to_i)
